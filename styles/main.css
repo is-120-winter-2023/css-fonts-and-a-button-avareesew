@@ -1,0 +1,186 @@
+/*****************************************************/
+/* This semester we will be using my variation of    */
+/* Josh Comeau's CSS Reset instead of normalize      */
+/* Read more at                                      */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*****************************************************/
+/* Always add your CSS below the reset CSS           */
+/*****************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  /* this an experimental line-height; if it breaks, add line-height: 1.5 to body */
+  line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* until you get a feel for overflow, I'll keep these next two commented out */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+/* p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+} */
+
+/* temp CSS for HTML only assignments */
+picture img {
+  width: 100%;
+}
+
+svg {
+  width: 200px;
+}
+
+/* temp fix to size about img */
+img[srcset] {
+  width: 50%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+/* temporary fix to size svg images */
+img[src$="svg"] {
+  width: 200px;
+}
+
+/************ add your CSS here *****************/
+
+:root {
+  --color-heading1: #012b7b; /* dark blue */
+  --color-heading2: #4f87ed; /* light blue */
+  --color-heading3: #9f72cb; /* purple */
+  --color-heading4: #de67b8; /* pink */
+  --color-accent2: #59a27c; /* green */
+  --main-text: #595959;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+  color: var(--color-heading1);
+  font-size: 3.5rem;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+  color: var(--color-heading2);
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: "DM Serif Display", serif;
+  color: var(--color-heading3);
+  font-size: 2rem;
+}
+
+h4 {
+  font-family: "DM Serif Display", serif;
+  color: var(--color-heading4);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  color: var(--main-text);
+}
+p {
+  margin-bottom: 1.5rem;
+}
+
+article,
+aside {
+  margin-bottom: 6rem;
+}
+a {
+  text-decoration: none;
+  color: var(--color-heading3);
+}
+a[href]:hover {
+  color: var(--color-accent2);
+}
+/* a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+} */
+
+.button {
+  background-color: var(--color-heading1);
+  color: var(--color-heading2);
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: var(--button-letter-spacing);
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 14px 4rem;
+  align-items: center;
+  transition: background-color 250ms ease, color 250ms ease;
+  display: inline-block;
+}
+a.button:hover {
+  background-color: var(--color-heading2);
+  color: var(--color-heading1);
+  cursor: pointer;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 40rem;
+}
+
+footer {
+  background-color: var(--color-heading2);
+  padding: 3rem;
+}
+
+footer p {
+  color: white;
+  margin-bottom: 0rem;
+}
